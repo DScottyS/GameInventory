@@ -18,9 +18,19 @@ namespace GameInventory
             return new Clue();
         }
 
-/*        public Item MakeRandomItem()
+        public Item MakeRandomItem()
         {
             return new Item();
-        }*/
+        }
+
+        public Weapon MakeRandomWeapon(RarityType rarity)
+        {
+            return new Weapon();
+        }
+
+        public Weapon MakeRandomWeapon(RarityType rarity, bool isAccurate, string incriminates)
+        {
+            return new Weapon();
+        }
     }
 }

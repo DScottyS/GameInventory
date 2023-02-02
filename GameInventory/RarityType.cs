@@ -18,7 +18,7 @@ using System.Threading.Tasks;
 
 namespace GameInventory
 {
-    public enum Rarity
+    public enum RarityType
     {
         COMMON,
         UNCOMMON,

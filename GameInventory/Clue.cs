@@ -29,11 +29,11 @@ namespace GameInventory
             accuracy = false;
         }
 
-        /*public Clue(string name, string description, double weight, double value) : base(name, description, weight, value)
+        public Clue(string name, string description, double weight, double value) : base(name, description, weight, value)
         {
             personIncriminated = string.Empty;
             accuracy = false;
-        }*/
+        }
 
         public Clue(string name, string description, double weight, double value, string incriminates, bool isAccurate) : base(name, description, weight, value)
         {

@@ -22,7 +22,7 @@ namespace GameInventory
     {
         protected string Description { get; set; }
         protected string Name { get; set; }
-        protected Rarity rarity { get; set; }
+        protected RarityType rarity { get; set; }
         protected double Value { get; set; }
         protected double Weight { get; set; }
 
