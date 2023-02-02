@@ -34,53 +34,53 @@ namespace GameInventory
 
         public static string ListClues()
         {
-            string info = string.Empty;
+            string clue = string.Empty;
 
-            foreach (Item C in Contents)
+            foreach (Item c in Contents)
             {
-                if (C is Clue)
+                if (c is Clue)
                 {
-                    info += "--------------------------------";
-                    info += $"{C}";
-                    info += "--------------------------------";
+                    clue += "--------------------------------";
+                    clue += $"{c}";
+                    clue += "--------------------------------";
                 }
             }
 
-            return info;
+            return clue;
         }
 
         public static string ListItems()
         {
-            string info = string.Empty;
+            string contents = string.Empty;
 
-            foreach (Item I in Contents)
+            foreach (Item i in Contents)
             {
-                if (I is Item)
+                if (i is Item)
                 {
-                    info += "--------------------------------";
-                    info += $"{I}";
-                    info += "--------------------------------";
+                    contents += "--------------------------------";
+                    contents += $"{i}";
+                    contents += "--------------------------------";
                 }
             }
 
-            return info;
+            return contents;
         }
 
         public static string ListWeapons()
         {
-            string info = string.Empty;
+            string weapon = string.Empty;
 
-            foreach (Item W in Contents) 
+            foreach (Item w in Contents) 
             { 
-                if (W is Weapon)
+                if (w is Weapon)
                 {
-                    info += "--------------------------------";
-                    info += $"{W}";
-                    info += "--------------------------------";
+                    weapon += "--------------------------------";
+                    weapon += $"{w}";
+                    weapon += "--------------------------------";
                 }
             }
 
-            return info;
+            return weapon;
         }
     }
 }

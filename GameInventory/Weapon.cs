@@ -21,8 +21,36 @@ namespace GameInventory
     //add inheritance from clue class
     public class Weapon : Clue
     {
-        protected int _damage;
-        protected DamageType _damagetype;
+        protected int Damage;
+        protected DamageType DamageType;
 
+        public Weapon() 
+        { 
+            Damage = 0;
+            DamageType = DamageType.BLUDGEONING;
+        }
+
+        public Weapon(string name, string description, double weight, double value) : base(name, description, weight, value)
+        {
+            Damage = 0;
+            DamageType = DamageType.BLUDGEONING;
+        }
+
+        /*public Weapon(string name, string description, double weight, double value, int damage, DamageType damageType) :
+            base(name, description, weight, value)
+        {
+            Damage = damage;
+            DamageType = damageType;
+        }*/
+
+        public override string ToString() 
+        {
+            string info = string.Empty;
+
+            info += $"Damage: {Damage}";
+            info += $"Damage Type: {DamageType}";
+
+            return info;
+        }
     }
 }

@@ -26,6 +26,14 @@ namespace GameInventory
         protected double Value { get; set; }
         protected double Weight { get; set; }
 
+        public Item() 
+        { 
+            Name = string.Empty;
+            Description = string.Empty;
+            Value = 0;
+            Weight = 0;
+        }
+
         public Item(string name, string description, double weight, double value)
         {
             Name = name;
