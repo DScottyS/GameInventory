@@ -2,7 +2,7 @@
          //                                                                                                     //
         //                                                                                                     //
        // Project: GameInventory                                                                              //
-      // File Name: DamageType                                                                               //
+      // File Name: Weapon                                                                                   //
      // Course: CSCI 2210 – Introduction to Computer Science II                                             //
     // Author: Scotty Snyder, snyderds@etsu.edu, Department of Computing, East Tennessee State University  //
    // Created: Thursday, January 26, 2023                                                                 //
@@ -18,10 +18,11 @@ using System.Threading.Tasks;
 
 namespace GameInventory
 {
-    public enum DamageType
+    //add inheritance from clue class
+    public class Weapon : Clue
     {
-        SLASHING,
-        PIERCING,
-        BLUDGEONING
+        protected int _damage;
+        protected DamageType _damagetype;
+
     }
 }

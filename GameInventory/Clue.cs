@@ -2,7 +2,7 @@
          //                                                                                                     //
         //                                                                                                     //
        // Project: GameInventory                                                                              //
-      // File Name: DamageType                                                                               //
+      // File Name: Rarity                                                                                   //
      // Course: CSCI 2210 – Introduction to Computer Science II                                             //
     // Author: Scotty Snyder, snyderds@etsu.edu, Department of Computing, East Tennessee State University  //
    // Created: Thursday, January 26, 2023                                                                 //
@@ -18,10 +18,10 @@ using System.Threading.Tasks;
 
 namespace GameInventory
 {
-    public enum DamageType
+    public class Clue : Item
     {
-        SLASHING,
-        PIERCING,
-        BLUDGEONING
+        protected bool accuracy;
+        protected string personIncriminated;
+
     }
 }
