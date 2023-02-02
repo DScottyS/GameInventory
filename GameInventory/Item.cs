@@ -46,12 +46,10 @@ namespace GameInventory
         {
             string info = "";
 
-            info += "------------------------------------------";
             info += $"{Name}";
             info += $"{Description}";
             info += $"{Weight}";
             info += $"{Value}";
-            info += "------------------------------------------";
 
             return info;
         }

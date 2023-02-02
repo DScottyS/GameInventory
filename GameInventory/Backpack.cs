@@ -10,6 +10,7 @@
  //                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using Microsoft.VisualBasic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,13 +37,13 @@ namespace GameInventory
         {
             string clue = string.Empty;
 
+            clue += "Clues: ---------------------------";
             foreach (Item c in Contents)
             {
                 if (c is Clue)
                 {
-                    clue += "--------------------------------";
                     clue += $"{c}";
-                    clue += "--------------------------------";
+                    clue += "----------------------------------";
                 }
             }
 
@@ -53,13 +54,14 @@ namespace GameInventory
         {
             string contents = string.Empty;
 
+            contents += "Items: ---------------------------";
+
             foreach (Item i in Contents)
             {
                 if (i is Item)
                 {
-                    contents += "--------------------------------";
                     contents += $"{i}";
-                    contents += "--------------------------------";
+                    contents += "----------------------------------";
                 }
             }
 
@@ -70,13 +72,13 @@ namespace GameInventory
         {
             string weapon = string.Empty;
 
+            weapon += "Weapons: -------------------------";
             foreach (Item w in Contents) 
             { 
                 if (w is Weapon)
                 {
-                    weapon += "--------------------------------";
                     weapon += $"{w}";
-                    weapon += "--------------------------------";
+                    weapon += "----------------------------------";
                 }
             }
 
