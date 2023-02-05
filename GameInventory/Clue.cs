@@ -40,5 +40,6 @@ namespace GameInventory
             accuracy = isAccurate;
             personIncriminated = incriminates;
         }
+
     }
 }

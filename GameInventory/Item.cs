@@ -44,11 +44,11 @@ namespace GameInventory
 
         public override string ToString()
         {
-            string info = "";
+            string info = string.Empty;
 
-            info += $"{Name}";
-            info += $"{Description}";
-            info += $"{Weight}";
+            info += $"{Name}\n";
+            info += $"{Description}\n";
+            info += $"{Weight} \n";
             info += $"{Value}";
 
             return info;

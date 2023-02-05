@@ -10,13 +10,25 @@
  //                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using System.Security.Cryptography.X509Certificates;
+
 namespace GameInventory
 {
     public class Driver
     {
         static void Main(string[] args)
         {
+            Backpack playerBackpack = new Backpack();
+            playerBackpack.Add(ItemFactory.MakeRandomClue());
+            playerBackpack.Add(ItemFactory.MakeRandomClue());
+            playerBackpack.Add(ItemFactory.MakeRandomClue());
+            playerBackpack.Add(ItemFactory.MakeRandomItem());
+            playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.RARE));
+            playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.UNCOMMON));
 
+            Console.WriteLine(playerBackpack.ListClues());
+            //Console.WriteLine(playerBackpack.ListItems());
+            Console.WriteLine(playerBackpack.ListWeapons());
         }
     }
 }

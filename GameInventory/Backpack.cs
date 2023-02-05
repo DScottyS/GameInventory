@@ -23,62 +23,62 @@ namespace GameInventory
     {
         public static List<Item> Contents;
 
-        public static void Add(Item item)
-        {
-            Contents.Add(item);
-        }
-
-        Backpack()
+        public Backpack()
         {
             Contents = new List<Item>();
         }
 
-        public static string ListClues()
+        public void Add(Item item)
+        {
+            Contents.Add(item);
+        }
+
+        public string ListClues()
         {
             string clue = string.Empty;
 
-            clue += "Clues: ---------------------------";
+            clue += "Clues: ---------------------------\n";
             foreach (Item c in Contents)
             {
                 if (c is Clue)
                 {
-                    clue += $"{c}";
-                    clue += "----------------------------------";
+                    clue += $"{c}\n";
+                    clue += "----------------------------------\n";
                 }
             }
 
             return clue;
         }
 
-        public static string ListItems()
+        public string ListItems()
         {
             string contents = string.Empty;
 
-            contents += "Items: ---------------------------";
+            contents += "Items: ---------------------------\n";
 
             foreach (Item i in Contents)
             {
                 if (i is Item)
                 {
-                    contents += $"{i}";
-                    contents += "----------------------------------";
+                    contents += $"{i}\n";
+                    contents += "----------------------------------\n";
                 }
             }
 
             return contents;
         }
 
-        public static string ListWeapons()
+        public string ListWeapons()
         {
             string weapon = string.Empty;
 
-            weapon += "Weapons: -------------------------";
+            weapon += "Weapons: -------------------------\n";
             foreach (Item w in Contents) 
             { 
                 if (w is Weapon)
                 {
-                    weapon += $"{w}";
-                    weapon += "----------------------------------";
+                    weapon += $"{w}\n";
+                    weapon += "----------------------------------\n";
                 }
             }
 

@@ -23,6 +23,7 @@ namespace GameInventory
     {
         protected int Damage;
         protected DamageType DamageType;
+        protected RarityType RarityType;
 
         public Weapon() 
         { 
@@ -36,21 +37,31 @@ namespace GameInventory
             DamageType = DamageType.BLUDGEONING;
         }
 
-        /*public Weapon(string name, string description, double weight, double value, int damage, DamageType damageType) :
-            base(name, description, weight, value)
+        public Weapon(string name, string description, double weight, double value, int damage, DamageType damageType, RarityType rarityType) :
+             base(name, description, weight, value)
         {
             Damage = damage;
             DamageType = damageType;
-        }*/
+            RarityType = rarityType;
+        }
+
+        public Weapon(string name, string description, double weight, double value, int damage, DamageType damageType, RarityType rarityType, string incriminates, bool isAccurate) :
+             base(name, description, weight, value, incriminates, isAccurate)
+        {
+            Damage = damage;
+            DamageType = damageType;
+            RarityType = rarityType;
+
+        }
 
         public override string ToString() 
         {
-            string info = string.Empty;
+            string info = "";
 
-            info += $"Damage: {Damage}";
+            info += $"\nDamage: {Damage}\n";
             info += $"Damage Type: {DamageType}";
 
-            return info;
+            return base.ToString() + info;
         }
     }
 }
