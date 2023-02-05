@@ -55,7 +55,7 @@ namespace GameInventory
             clue += "Clues: ---------------------------\n";
             foreach (Item c in Contents)
             {
-                if (c is Clue)
+                if (c is Clue && c is not Weapon)
                 {
                     clue += $"{c}\n";
                     clue += "----------------------------------\n";

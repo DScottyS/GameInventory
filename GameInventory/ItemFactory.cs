@@ -43,6 +43,8 @@ namespace GameInventory
             ItemReader = new StreamReader("Item Files\\Clues.txt");
 
             //reads the first four lines of the provided file and uses the respective delimiters to parse the data
+            //note: I really wanted to find a way to clean this up and make it look nice and compact but I struggled to find any,
+            //if you have the time to suggest a way to make it nicer I'd greatly appreciate it
             string lineOne = ItemReader.ReadLine();
             string[] clueName = lineOne.Split("-");
             string lineTwo = ItemReader.ReadLine();
