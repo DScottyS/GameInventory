@@ -1,34 +1,46 @@
-﻿          /////////////////////////////////////////////////////////////////////////////////////////////////////////
-         //                                                                                                     //
-        //                                                                                                     //
-       // Project: GameInventory                                                                              //
-      // File Name: Driver                                                                                   //
-     // Course: CSCI 2210 – Introduction to Computer Science II                                             //
-    // Author: Scotty Snyder, snyderds@etsu.edu, Department of Computing, East Tennessee State University  //
-   // Created: Thursday, January 26, 2023                                                                 //
-  // Copyright: Scotty Snyder, 2023                                                                      //
- //                                                                                                     //
+﻿/////////////////////////////////////////////////////////////////////////////////////////////////////////
+//                                                                                                     //
+//                                                                                                     //
+// Project: GameInventory                                                                              //
+// File Name: Driver                                                                                   //
+// Course: CSCI 2210 – Introduction to Computer Science II                                             //
+// Author: Scotty Snyder, snyderds@etsu.edu, Department of Computing, East Tennessee State University  //
+// Created: Thursday, January 26, 2023                                                                 //
+// Copyright: Scotty Snyder, 2023                                                                      //
+//                                                                                                     //
 /////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+using System.ComponentModel;
 using System.Security.Cryptography.X509Certificates;
 
 namespace GameInventory
 {
+    /// <summary>
+    /// driver class relates all other classes to the main method
+    /// </summary>
     public class Driver
     {
-        static void Main(string[] args)
+        /// <summary>
+        /// main method
+        /// </summary>
+        static void Main()
         {
+            //creates a new backpack, creates new items, weapons, and clues, and puts them in the 
             Backpack playerBackpack = new Backpack();
             playerBackpack.Add(ItemFactory.MakeRandomClue());
             playerBackpack.Add(ItemFactory.MakeRandomClue());
             playerBackpack.Add(ItemFactory.MakeRandomClue());
+            playerBackpack.Add(ItemFactory.MakeRandomClue(false, "bob"));
             playerBackpack.Add(ItemFactory.MakeRandomItem());
             playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.RARE));
             playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.UNCOMMON));
+            playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.COMMON, true, "Bob"));
 
+            //lists all the clues, all the weapons, and finally lists everything
             Console.WriteLine(playerBackpack.ListClues());
-            //Console.WriteLine(playerBackpack.ListItems());
             Console.WriteLine(playerBackpack.ListWeapons());
+            Console.WriteLine(playerBackpack.ListItems());
+
         }
     }
 }

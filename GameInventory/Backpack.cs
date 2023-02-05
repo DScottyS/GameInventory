@@ -19,20 +19,35 @@ using System.Threading.Tasks;
 
 namespace GameInventory
 {
+    /// <summary>
+    /// backpack class contains all the items, weapons, and clues
+    /// </summary>
     public class Backpack
     {
+        //creates a new list for all of the items of the backpack to be stored in
         public static List<Item> Contents;
 
+        /// <summary>
+        /// default constructor
+        /// </summary>
         public Backpack()
         {
             Contents = new List<Item>();
         }
 
+        /// <summary>
+        /// adds an item to the backpack
+        /// </summary>
+        /// <param name="item">item to de added to the backpack</param>
         public void Add(Item item)
         {
             Contents.Add(item);
         }
 
+        /// <summary>
+        /// lists all clues in the backpack
+        /// </summary>
+        /// <returns>a string containing all clues in the backpack</returns>
         public string ListClues()
         {
             string clue = string.Empty;
@@ -50,6 +65,10 @@ namespace GameInventory
             return clue;
         }
 
+        /// <summary>
+        /// lists all items in the backpack
+        /// </summary>
+        /// <returns>a string containing all items in the backpack</returns>
         public string ListItems()
         {
             string contents = string.Empty;
@@ -68,6 +87,10 @@ namespace GameInventory
             return contents;
         }
 
+        /// <summary>
+        /// lists all weapons in the backpack
+        /// </summary>
+        /// <returns>a string containing all weapons in the backpack</returns>
         public string ListWeapons()
         {
             string weapon = string.Empty;

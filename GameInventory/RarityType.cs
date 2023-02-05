@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 
 namespace GameInventory
 {
+    /// enum that lists all the rarity types the program will recognize
     public enum RarityType
     {
         COMMON,

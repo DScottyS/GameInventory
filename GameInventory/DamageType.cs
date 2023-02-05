@@ -18,6 +18,9 @@ using System.Threading.Tasks;
 
 namespace GameInventory
 {
+    /// <summary>
+    /// enum that lists all the damage types the program will recognize
+    /// </summary>
     public enum DamageType
     {
         SLASHING,
