@@ -39,8 +39,8 @@ namespace GameInventory
         public static Clue MakeRandomClue()
         {
             Clue randomClue;
-            //uses the text file provded in the project's bin\Debug\net6.0\Item Files
-            ItemReader = new StreamReader("Item Files\\Clues.txt");
+            //uses the text file provided in the project's Item Files folder
+            ItemReader = new StreamReader("..\\..\\..\\Item Files\\Clues.txt");
 
             //reads the first four lines of the provided file and uses the respective delimiters to parse the data
             //note: I really wanted to find a way to clean this up and make it look nice and compact but I struggled to find any,
@@ -72,8 +72,8 @@ namespace GameInventory
         public static Clue MakeRandomClue(bool isAccurate, string incriminates)
         {
             Clue randomClue;
-            //uses the text file provded in the project's bin\Debug\net6.0\Item Files
-            ItemReader = new StreamReader("Item Files\\Clues.txt");
+            //uses the text file provded in the project's Item Files folder
+            ItemReader = new StreamReader("..\\..\\..\\Item Files\\Clues.txt");
 
             //reads the first four lines of the provided file and uses the respective delimiters to parse the data
             string lineOne = ItemReader.ReadLine();
@@ -97,7 +97,7 @@ namespace GameInventory
         /// <summary>
         /// uses a random number to chose whether it should create a weapon or a clue
         /// </summary>
-        /// <returns></returns>
+        /// <returns>a random clue or weapon</returns>
         public static Item MakeRandomItem()
         {
             if (rand.Next(1, 3) == 1)
@@ -118,13 +118,13 @@ namespace GameInventory
         /// <summary>
         /// creates a randomized weapon using using the data given to it in the respective text file and user information
         /// </summary>
-        /// <param name="rarity"></param>
-        /// <returns></returns>
+        /// <param name="rarity">rarity of the weapon</param>
+        /// <returns>a random weapon with specified rarity</returns>
         public static Weapon MakeRandomWeapon(RarityType rarity)
         {
             Weapon randomWeapon;
-            //uses the text file provded in the project's bin\Debug\net6.0\Item Files
-            StreamReader WeaponReader = new StreamReader("Item Files\\Weapons.txt");
+            //uses the text file provded in the project's Item Files folder
+            StreamReader WeaponReader = new StreamReader("..\\..\\..\\Item Files\\Weapons.txt");
 
             //reads the first five lines of the provided file and uses the respective delimiters to parse the data
             string lineOne = WeaponReader.ReadLine();
@@ -164,8 +164,8 @@ namespace GameInventory
         public static Weapon MakeRandomWeapon(RarityType rarity, bool isAccurate, string incriminates)
         {
             Weapon randomWeapon;
-            //uses the text file provded in the project's bin\Debug\net6.0\Item Files
-            StreamReader WeaponReader = new StreamReader("Item Files\\Weapons.txt");
+            //uses the text file provded in the project's Item Files folder
+            StreamReader WeaponReader = new StreamReader("..\\..\\..\\Item Files\\Weapons.txt");
 
             //reads the first five lines of the provided file and uses the respective delimiters to parse the data
             string lineOne = WeaponReader.ReadLine();

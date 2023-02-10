@@ -24,11 +24,14 @@ namespace GameInventory
         /// </summary>
         static void Main()
         {
+            Console.Clear();
+
             //creates a new backpack, creates new items, weapons, and clues, and puts them in the 
             Backpack playerBackpack = new Backpack();
             playerBackpack.Add(ItemFactory.MakeRandomClue());
             playerBackpack.Add(ItemFactory.MakeRandomClue());
             playerBackpack.Add(ItemFactory.MakeRandomClue(false, "bob"));
+            playerBackpack.Add(ItemFactory.MakeRandomClue());
             playerBackpack.Add(ItemFactory.MakeRandomItem());
             playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.RARE));
             playerBackpack.Add(ItemFactory.MakeRandomWeapon(RarityType.UNCOMMON));

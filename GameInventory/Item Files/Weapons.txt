@@ -1,0 +1,7 @@
+Anduril-Club-Old Block of Cheese-Fresh Block of Cheese-A Stick-A Block of Code-Brick-Sony Walkman
+Sharper than it looks|One of the weapons ever|What am I supposed to do with this?|You call that a weapon?|Now THAT'S a weapon!|That could probably do some damage
+1/2/3/5/7.6/23/22.2
+10,20,30,5,50,200,100,1000,1337,426.93
+128>136>12>100000>26>13>46>79>235
+
+All added values must be delimited by their respective delimiter
